@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <body style="background-color: #212123;">
+  	<center>
+    <head>
+        <title style= >Song-Artist Popularity Comparison</title>
+
+        <style>
+            html * {
+              font-size: 16px;
+              line-height: 1.625;
+              color: #C9C9C9;
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+          </style>
+    
+    </head>
+    <body>
+        <h1 style="font-size: 26px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:#E3BF53;">Genius Popularity Comparison</h1>
+
+        <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px">
+            Enter a song and artist to figure out which songs by that artist are more popular than that song!
+          </p>
+
+        <form action="/calculate" method="post">
+          
+            <input type="text" style="border-radius: 12px; color: black; padding-left: 10px; background-color: #AEAEAE;" id="input1" name="input1" placeholder="Enter Your Song" />
+            <br />
+            <br />
+
+            <input type="text" style="border-radius: 12px; color: black; padding-left: 10px; background-color: #AEAEAE;" id="input2" name="input2" placeholder="Enter Your Artist" />
+            <br />
+
+            <style>
+              button:hover {
+                background-color: green;
+                cursor: pointer;
+              }
+            </style>
+
+            <br>
+
+            <button type="submit" style="width: 170px; height: 40px; background-color: #E3BF53; border-radius: 12px; color: black;">Show me the songs!</button>
+
+        {% if result %}
+            <p>Result: {{ result }}</p>
+        {% endif %}
+   	  </center>
+   </body>
+</html>
+
+
+
+
+
+
+
